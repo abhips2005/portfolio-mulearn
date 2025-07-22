@@ -12,19 +12,21 @@ export default function EducationSection() {
     {
       title: "B.Tech Computer Science",
       institution: "St. Joseph's College of Engineering and Technology, Palai",
-      duration: "2024 - Present",
+      duration: "2024 - Present (2nd Year)",
       description:
-        "Currently pursuing four year B.Tech Computer Science engineering which definitely enables me to learn new skills and enhance my existing skills.",
+        "Currently pursuing B.Tech Computer Science Engineering. This journey has enabled me to deepen my understanding of computer science fundamentals while working on practical projects and contributing to the tech community.",
       icon: <GraduationCap className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500",
+      details: ["Computer Science Engineering", "Active in IEEE Student Chapter", "Tech Fest Student Coordinator", "Mulearn Campus Co-Lead"]
     },
     {
-      title: "Higher Secondary Education",
+      title: "Higher Secondary Education - Computer Science",
       institution: "St. Augustine's H.S.S. Karimkunnam",
-      duration: "2022 - 2024",
-      description: "Studied Plus Two (Computer Science Stream) from SAHSS, Karimkunnam.",
+      duration: "2023 - 2024",
+      description: "Completed Higher Secondary Education with Computer Science stream, which laid the foundation for my passion in technology and programming.",
       icon: <BookOpen className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500",
+      details: ["Computer Science Stream", "Foundation in Programming", "Mathematics & Physics"]
     },
   ]
 
@@ -39,8 +41,8 @@ export default function EducationSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My <span className="text-primary">Education</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            My <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Education</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
         </motion.div>
@@ -63,7 +65,7 @@ export default function EducationSection() {
 
                 <Card className="overflow-hidden bg-slate-900/60 backdrop-blur border-gray-800 hover:shadow-lg hover:shadow-blue-900/10 transition-all duration-300">
                   <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center text-xl font-bold">
+                    <CardTitle className="flex items-center text-xl font-bold text-white">
                       <div
                         className={`w-8 h-8 rounded-lg mr-2 flex items-center justify-center bg-gradient-to-r ${item.color}`}
                       >
@@ -76,6 +78,18 @@ export default function EducationSection() {
                   <CardContent>
                     <p className="text-gray-300 font-medium">{item.institution}</p>
                     <p className="mt-2 text-gray-400 text-sm">{item.description}</p>
+                    {item.details && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {item.details.map((detail, i) => (
+                          <span
+                            key={i}
+                            className="px-2 py-1 text-xs bg-slate-800 text-gray-300 rounded-full border border-gray-700"
+                          >
+                            {detail}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>

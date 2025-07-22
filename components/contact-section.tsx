@@ -77,8 +77,8 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="text-primary">Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Get In <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Touch</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
@@ -94,7 +94,7 @@ export default function ContactSection() {
           >
             <Card className="h-full bg-slate-900/60 backdrop-blur border-gray-800">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-white">Contact Information</h3>
 
                 <div className="space-y-6">
                   {contactInfo.map((item, index) => (
@@ -110,7 +110,7 @@ export default function ContactSection() {
                         <p className="text-sm text-gray-400">{item.label}</p>
                         <Link
                           href={item.link}
-                          className="text-gray-300 hover:text-primary transition-colors duration-300"
+                          className="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:underline"
                         >
                           {item.value}
                         </Link>
@@ -120,10 +120,10 @@ export default function ContactSection() {
                 </div>
 
                 <div className="mt-8">
-                  <h4 className="text-lg font-medium mb-4">Follow Me</h4>
+                  <h4 className="text-lg font-medium mb-4 text-white">Follow Me</h4>
                   <div className="flex space-x-3">
                     <Link
-                      href="https://github.com"
+                      href="https://github.com/abhips2005"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-900/30 transition-colors duration-300"
@@ -144,7 +144,7 @@ export default function ContactSection() {
                       </svg>
                     </Link>
                     <Link
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/abhips1108"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-900/30 transition-colors duration-300"
@@ -167,7 +167,7 @@ export default function ContactSection() {
                       </svg>
                     </Link>
                     <Link
-                      href="https://abhijiths.online"
+                      href="http://wa.me/917306289673"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-900/30 transition-colors duration-300"
@@ -184,9 +184,7 @@ export default function ContactSection() {
                         strokeLinejoin="round"
                         className="text-gray-300"
                       >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                       </svg>
                     </Link>
                   </div>
@@ -202,7 +200,7 @@ export default function ContactSection() {
           >
             <Card className="h-full bg-slate-900/60 backdrop-blur border-gray-800">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-white">Send Me a Message</h3>
 
                 {isSubmitted ? (
                   <motion.div

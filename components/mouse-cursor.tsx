@@ -40,7 +40,7 @@ export function MouseCursor() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 z-50 w-6 h-6 rounded-full bg-transparent border-2 border-primary pointer-events-none"
+        className="fixed top-0 left-0 z-50 w-6 h-6 rounded-full bg-transparent border-2 border-cyan-400 pointer-events-none shadow-lg shadow-cyan-400/30"
         animate={{
           x: mousePosition.x - 12,
           y: mousePosition.y - 12,
@@ -55,7 +55,7 @@ export function MouseCursor() {
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 z-50 w-2 h-2 rounded-full bg-primary pointer-events-none"
+        className="fixed top-0 left-0 z-50 w-2 h-2 rounded-full bg-cyan-400 pointer-events-none shadow-sm shadow-cyan-400/50"
         animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
